@@ -78,6 +78,7 @@ out/
 ######################
 .gradle/
 /build/
+/gwt-client/build/
 
 ######################
 # Package Files

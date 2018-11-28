@@ -20,6 +20,7 @@ import { SeparategwtEntityModule } from './entities/entity.module';
 import * as moment from 'moment';
 // jhipster-needle-angular-add-module-import JHipster will add new module here
 import { JhiMainComponent, NavbarComponent, FooterComponent, PageRibbonComponent, ErrorComponent } from './layouts';
+import { GwtRestModule } from 'app/gwt-rest';
 
 @NgModule({
     imports: [
@@ -30,6 +31,7 @@ import { JhiMainComponent, NavbarComponent, FooterComponent, PageRibbonComponent
         SeparategwtCoreModule,
         SeparategwtHomeModule,
         SeparategwtAccountModule,
+        GwtRestModule,
         // jhipster-needle-angular-add-module JHipster will add new module here
         SeparategwtEntityModule
     ],

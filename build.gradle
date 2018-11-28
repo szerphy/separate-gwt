@@ -54,9 +54,20 @@ version = '0.0.1-SNAPSHOT'
 
 description = ''
 
-bootWar {
-   mainClassName = 'com.zerphy.separategwt.SeparategwtApp'
+task bootRunCopyGwt(type: Copy) {
+    from tasks.getByPath(':gwt-client:compileGwt').outputs
+    into 'build/resources/main/static'
 }
+bootRunCopyGwt.dependsOn(':gwt-client:compileGwt')
+bootRun.dependsOn bootRunCopyGwt
+
+bootWar {
+    mainClassName = 'com.zerphy.separategwt.SeparategwtApp'
+    into('/') {
+        from tasks.getByPath(':gwt-client:compileGwt').outputs
+    }
+}
+bootWar.dependsOn ':gwt-clean:compileGwt'
 
 war {
 
