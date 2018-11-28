@@ -1,0 +1,22 @@
+{
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "age",
+            "fieldType": "Integer"
+        }
+    ],
+    "changelogDate": "20181128050846",
+    "dto": "no",
+    "searchEngine": false,
+    "service": "no",
+    "entityTableName": "person",
+    "jpaMetamodelFiltering": false,
+    "pagination": "no"
+}
